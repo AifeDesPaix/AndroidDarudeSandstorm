@@ -1,6 +1,7 @@
 package com.example.aifedespaix.aifedespaix;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -106,6 +107,15 @@ public class FullscreenActivity extends AppCompatActivity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+        findViewById(R.id.dummy_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intAccueil;
+                intAccueil = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intAccueil);
+            }
+        });
+
     }
 
     @Override
