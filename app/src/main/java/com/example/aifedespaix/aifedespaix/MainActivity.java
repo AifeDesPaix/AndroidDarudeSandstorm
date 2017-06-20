@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void loadIntentCalc1() {
         intCalc1 = new Intent(getApplicationContext(), FullscreenActivity.class);
+        intCalc1.putExtra("chiennasse", edtLogin.getText().toString());
         startActivity(intCalc1);
     }
 }

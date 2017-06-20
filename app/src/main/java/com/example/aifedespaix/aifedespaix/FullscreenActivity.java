@@ -8,12 +8,16 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Toast;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
 public class FullscreenActivity extends AppCompatActivity {
+
+    Intent chiennasse;
+
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -94,6 +98,9 @@ public class FullscreenActivity extends AppCompatActivity {
         mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
 
+        chiennasse = getIntent();
+        String param = chiennasse.getStringExtra("chiennasse");
+        Toast.makeText(getApplicationContext(), param, Toast.LENGTH_LONG).show();
 
         // Set up the user interaction to manually show or hide the system UI.
         mContentView.setOnClickListener(new View.OnClickListener() {
@@ -115,6 +122,8 @@ public class FullscreenActivity extends AppCompatActivity {
                 startActivity(intAccueil);
             }
         });
+
+
 
     }
 
