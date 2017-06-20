@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class Main3Activity extends AppCompatActivity {
+public class CalculatorAdvancedActivity extends AppCompatActivity {
 
     Button btn;
 
