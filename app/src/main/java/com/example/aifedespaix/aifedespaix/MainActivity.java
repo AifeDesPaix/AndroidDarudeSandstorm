@@ -12,13 +12,12 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    /** Trucs Random **/
     private Button btn;
     private EditText edtLogin;
     private EditText edtPassword;
 
-    private TextView tv;
-
-    /** Instances d'écrans **/
+    /** Instances d'activités **/
     Intent intCalc1;
 
     public void toast() {
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         /**
-         * Message
+         * Bouton Message
          */
         Button btnCalcul = (Button) findViewById(R.id.calculBtn);
         btnCalcul.setOnClickListener(new View.OnClickListener() {
@@ -58,10 +57,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         /**
-         * Calcul
+         * Bouton message
          */
-        Button btn = (Button) findViewById(R.id.toggleButton);
-        btn.setOnClickListener(new View.OnClickListener() {
+        Button btnMes = (Button) findViewById(R.id.toggleButton);
+        btnMes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Nique dont ta vieille race "+edtLogin.getText(), Toast.LENGTH_LONG).show();
@@ -69,13 +68,16 @@ public class MainActivity extends AppCompatActivity {
                 TextView message = (TextView) findViewById(R.id.textView2);
                 message.setText(edtLogin.getText()+" est un connard !");
 
-//                loadIntentCalc1();
+                loadIntentCalc1();
             }
         });
     }
 
+    /**
+     * Charger une activité
+     */
     private void loadIntentCalc1() {
-        intCalc1 = new Intent(getApplicationContext(), MainActivity2.class);
+        intCalc1 = new Intent(getApplicationContext(), FullscreenActivity.class);
         startActivity(intCalc1);
     }
 }
