@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Aifedespaix</string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="button">Button</string>
+    <string name="resultat">Resultat</string>
+    <string name="calculatrice">Calculatrice</string>
+    <string name="es_tu_un_fils_de_pute">Es-tu un fils de pute ?</string>
+    <string name="r_sultat">Résultat</string>
+    <string name="calculatricename">Calculatrice</string>
+    <string name="divide">/</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="multiply">*</string>
+</resources>
